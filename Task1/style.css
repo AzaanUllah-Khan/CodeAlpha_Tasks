@@ -1,0 +1,198 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.calculator {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.screen {
+    height: 70px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+    font-size: 1.5em;
+}
+
+.result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.equation {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    text-align: right;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 1.2em;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s;
+}
+
+button:active {
+    background-color: #e0e0e0;
+}
+
+button {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.dark-mode-btn {
+    grid-column: 1 / span 4;
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode-btn:hover {
+    background-color: #555;
+}
+
+
+.dark-mode {
+    color: #fff;
+}
+
+.dark-mode .screen,
+.dark-mode .result,
+.dark-mode .equation {
+    color: #fff;
+
+}
+
+.dark-mode .screen {
+    background-color: #222;
+}
+
+.dark-mode button {
+    background-color: #444;
+
+    color: #fff;
+
+}
+
+.dark-mode button:active {
+    background-color: #666;
+
+}
+
+.dark-mode .buttons .equal-btn {
+    background-color: #ffa500;
+
+    color: #fff;
+
+}
+
+.dark-mode .buttons .equal-btn:hover {
+    background-color: #ffbb33;
+
+}
+
+.dark-mode .buttons .clear-btn {
+    background-color: #ff6464;
+
+}
+
+.dark-mode .buttons .clear-btn:hover {
+    background-color: #ff8787;
+
+}
+
+.dark-mode .buttons .all-clear-btn {
+    background-color: #a0a0a0;
+
+}
+
+.dark-mode .buttons .all-clear-btn:hover {
+    background-color: #c0c0c0;
+
+}
+
+.dark-mode .equation,
+.dark-mode .result {
+    color: #000;
+}
+
+.dark-mode .dark-mode-btn {
+    background-color: #fff;
+
+    color: #000;
+
+}
+
+
+.equal-btn {
+    grid-column: span 2;
+
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.equal-btn:hover {
+    background-color: #ffbb33;
+
+    color: #fff;
+}
+
+
+.clear-btn:hover {
+    background-color: #ff6464;
+
+    color: #fff;
+}
+
+.all-clear-btn:hover {
+    background-color: #a0a0a0;
+
+    color: #fff;
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-icon {
+    animation: rotateIcon .7s linear;
+}
